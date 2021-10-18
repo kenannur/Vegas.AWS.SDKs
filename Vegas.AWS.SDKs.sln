@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegas.AWS.SimpleQueueServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegas.AWS.Common", "Vegas.AWS.Common\Vegas.AWS.Common.csproj", "{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegas.AWS.Api", "Vegas.AWS.Api\Vegas.AWS.Api.csproj", "{5B31BDF4-0C6F-477E-8163-CB178BB1E9BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B31BDF4-0C6F-477E-8163-CB178BB1E9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B31BDF4-0C6F-477E-8163-CB178BB1E9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B31BDF4-0C6F-477E-8163-CB178BB1E9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B31BDF4-0C6F-477E-8163-CB178BB1E9BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

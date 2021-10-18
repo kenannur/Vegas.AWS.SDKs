@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Amazon.Runtime;
 using Amazon.SimpleSystemsManagement;
 using Amazon.SimpleSystemsManagement.Model;
 using Vegas.AWS.Common.Extensions;
@@ -31,16 +28,6 @@ namespace Vegas.AWS.SystemsManager.Service
                 Value = value
             });
             response.EnsureSuccessStatusCode();
-        }
-
-        public async Task<Parameter> GetParameterAsync(string name)
-        {
-            var response = await _client.GetParameterAsync(new GetParameterRequest
-            {
-                Name = name
-            });
-            response.EnsureSuccessStatusCode();
-            return response.Parameter;
         }
 
         public async Task<List<Parameter>> GetParametersAsync(string path)

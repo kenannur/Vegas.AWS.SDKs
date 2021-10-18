@@ -9,8 +9,6 @@ namespace Vegas.AWS.SystemsManager.Service
     {
         Task CreateParameterAsync(string name, string value);
 
-        Task<Parameter> GetParameterAsync(string name);
-
         Task<List<Parameter>> GetParametersAsync(string path);
 
         Task DeleteParameterAsync(string name);
