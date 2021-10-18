@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -61,12 +62,23 @@ namespace Vegas.AWS.SystemsManager.Service
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task ImportParametersAsync(string json)
+        public async Task ImportParametersAsync(string json, string prefix)
         {
             var dictionary = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
             foreach (var keyValuePair in dictionary)
             {
-                await CreateParameterAsync(keyValuePair.Key, keyValuePair.Value);
+                var key = Path.Combine(prefix, keyValuePair.Key);
+                await CreateParameterAsync(key, keyValuePair.Value);
+            }
+        }
+
+        public async Task ImportParametersAsync(Stream jsonStream, string prefix)
+        {
+            var dictionary = await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(jsonStream);
+            foreach (var keyValuePair in dictionary)
+            {
+                var key = Path.Combine(prefix, keyValuePair.Key);
+                await CreateParameterAsync(key, keyValuePair.Value);
             }
         }
 

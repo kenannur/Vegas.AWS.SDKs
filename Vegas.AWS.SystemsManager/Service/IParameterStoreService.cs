@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Amazon.SimpleSystemsManagement.Model;
 
@@ -14,7 +15,9 @@ namespace Vegas.AWS.SystemsManager.Service
 
         Task DeleteParameterAsync(string name);
 
-        Task ImportParametersAsync(string json);
+        Task ImportParametersAsync(string json, string prefix);
+
+        Task ImportParametersAsync(Stream jsonStream, string prefix);
 
         Task<string> ExportParametersAsync(string path);
     }
