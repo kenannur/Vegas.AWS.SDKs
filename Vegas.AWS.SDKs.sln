@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegas.AWS.SystemsManager", "Vegas.AWS.SystemsManager\Vegas.AWS.SystemsManager.csproj", "{FE6F35F7-4915-4AD2-A0F0-1CD9A465022A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegas.AWS.SimpleQueueService", "Vegas.AWS.SimpleQueueService\Vegas.AWS.SimpleQueueService.csproj", "{747AB019-6F8B-4FEF-979F-4C2791912C0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegas.AWS.Common", "Vegas.AWS.Common\Vegas.AWS.Common.csproj", "{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE6F35F7-4915-4AD2-A0F0-1CD9A465022A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6F35F7-4915-4AD2-A0F0-1CD9A465022A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6F35F7-4915-4AD2-A0F0-1CD9A465022A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6F35F7-4915-4AD2-A0F0-1CD9A465022A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747AB019-6F8B-4FEF-979F-4C2791912C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747AB019-6F8B-4FEF-979F-4C2791912C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747AB019-6F8B-4FEF-979F-4C2791912C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747AB019-6F8B-4FEF-979F-4C2791912C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0EFF5AD-8B4E-4C9D-A663-9D16BE923DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FC3C276-0825-4B1A-A992-CFE3A87F8BDE}
+	EndGlobalSection
+EndGlobal
