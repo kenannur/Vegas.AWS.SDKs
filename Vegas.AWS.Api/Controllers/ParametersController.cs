@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Vegas.AWS.SystemsManager.Service;
@@ -25,8 +26,13 @@ namespace Vegas.AWS.Api.Controllers
         [HttpPost("Import")]
         public async Task<IActionResult> ImportAsync([FromQuery] string prefix)
         {
-            var json = await System.IO.File.ReadAllTextAsync("Resources/Localizable.tr.json");
-            await _parameterService.ImportParametersAsync(json, prefix);
+            var prefixTR = Path.Combine(prefix, "tr");
+            var jsonTR = await System.IO.File.ReadAllTextAsync("Resources/Localizable.tr.json");
+            await _parameterService.ImportParametersAsync(jsonTR, prefixTR);
+
+            var prefixEN = Path.Combine(prefix, "en");
+            var jsonEN = await System.IO.File.ReadAllTextAsync("Resources/Localizable.en.json");
+            await _parameterService.ImportParametersAsync(jsonEN, prefixEN);
             return Ok();
         }
 
